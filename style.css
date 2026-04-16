@@ -1,13 +1,33 @@
 h1 {
     color:cadetblue;
     text-align: center;
+    animation: color-change 3s infinite alternate;
 }
 body {
     font-family: Arial, Helvetica, sans-serif; 
-    background-color: teal;
+    background-color: rgb(112, 141, 141);
     color: #fff;
     font-size: 20px;
 }
 h3 {
-    text-decoration: underline double burlywood;
+    text-decoration: underline double rgb(200, 188, 174);
+}
+
+@keyframes color-change {
+    from {color: white}
+    to {color:cornflowerblue}
+}
+
+img:hover {
+    transform: scale(120%);
+}
+
+img {
+    transition: transform 1s cubic-bezier(0, 0.27, 0, 1.78);
+    animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
